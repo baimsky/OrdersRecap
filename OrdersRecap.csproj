@@ -7,13 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Attachment\**" />
     <Compile Remove="Publish\**" />
-    <Content Remove="Attachment\**" />
     <Content Remove="Publish\**" />
-    <EmbeddedResource Remove="Attachment\**" />
     <EmbeddedResource Remove="Publish\**" />
-    <None Remove="Attachment\**" />
     <None Remove="Publish\**" />
   </ItemGroup>
 
@@ -24,6 +20,10 @@
   <ItemGroup>
     <PackageReference Include="DocumentFormat.OpenXml" Version="3.0.2" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Attachment\" />
   </ItemGroup>
 
 </Project>
