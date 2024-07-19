@@ -1,0 +1,55 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model OrdersRecap.Models.Masters
+
+@{
+    ViewData["Title"] = "Master Data";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                No.
+            </th>
+            <th>
+                Code
+            </th>
+            <th>
+                Category
+            </th>
+            <th>
+                Sub Category
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int rowNo = 0;
+        }
+        @foreach (var item in Model.masters)
+        {
+            @if (Model != null)
+            {
+                <tr>
+                    <td>
+                        @(rowNo += 1)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Code)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Category)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SubCategory)
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

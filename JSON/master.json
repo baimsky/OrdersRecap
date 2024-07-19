@@ -1,0 +1,989 @@
+{
+  "masters" : [
+    {
+      "code": "BTS",
+      "category": "Kalender",
+      "subcategory": "MEJA"
+    },
+    {
+      "code": "DC",
+      "category": "Kalender",
+      "subcategory": "MEJA"
+    },
+    {
+      "code": "DF",
+      "category": "Kalender",
+      "subcategory": "MEJA"
+    },
+    {
+      "code": "DL",
+      "category": "Kalender",
+      "subcategory": "MEJA"
+    },
+    {
+      "code": "FB",
+      "category": "Kalender",
+      "subcategory": "MEJA"
+    },
+    {
+      "code": "FM",
+      "category": "Kalender",
+      "subcategory": "MEJA"
+    },
+    {
+      "code": "HM",
+      "category": "Kalender",
+      "subcategory": "MEJA"
+    },
+    {
+      "code": "HW",
+      "category": "Kalender",
+      "subcategory": "MEJA"
+    },
+    {
+      "code": "HY",
+      "category": "Kalender",
+      "subcategory": "MEJA"
+    },
+    {
+      "code": "JC",
+      "category": "Kalender",
+      "subcategory": "MEJA"
+    },
+    {
+      "code": "JM",
+      "category": "Kalender",
+      "subcategory": "MEJA"
+    },
+    {
+      "code": "KM",
+      "category": "Kalender",
+      "subcategory": "MEJA"
+    },
+    {
+      "code": "KS",
+      "category": "Kalender",
+      "subcategory": "MEJA"
+    },
+    {
+      "code": "KV",
+      "category": "Kalender",
+      "subcategory": "MEJA"
+    },
+    {
+      "code": "LM",
+      "category": "Kalender",
+      "subcategory": "MEJA"
+    },
+    {
+      "code": "MB",
+      "category": "Kalender",
+      "subcategory": "MEJA"
+    },
+    {
+      "code": "PL",
+      "category": "Kalender",
+      "subcategory": "MEJA"
+    },
+    {
+      "code": "SE",
+      "category": "Kalender",
+      "subcategory": "MEJA"
+    },
+    {
+      "code": "VT",
+      "category": "Kalender",
+      "subcategory": "MEJA"
+    },
+    {
+      "code": "WP",
+      "category": "Kalender",
+      "subcategory": "MEJA"
+    },
+    {
+      "code": "ZE",
+      "category": "Kalender",
+      "subcategory": "MEJA"
+    },
+    {
+      "code": "AES",
+      "category": "Kalender",
+      "subcategory": "DINDING"
+    },
+    {
+      "code": "CF",
+      "category": "Kalender",
+      "subcategory": "DINDING"
+    },
+    {
+      "code": "FE",
+      "category": "Kalender",
+      "subcategory": "DINDING"
+    },
+    {
+      "code": "FK",
+      "category": "Kalender",
+      "subcategory": "DINDING"
+    },
+    {
+      "code": "FP",
+      "category": "Kalender",
+      "subcategory": "DINDING"
+    },
+    {
+      "code": "GH",
+      "category": "Kalender",
+      "subcategory": "DINDING"
+    },
+    {
+      "code": "GL",
+      "category": "Kalender",
+      "subcategory": "DINDING"
+    },
+    {
+      "code": "HF",
+      "category": "Kalender",
+      "subcategory": "DINDING"
+    },
+    {
+      "code": "MA",
+      "category": "Kalender",
+      "subcategory": "DINDING"
+    },
+    {
+      "code": "PF",
+      "category": "Kalender",
+      "subcategory": "DINDING"
+    },
+    {
+      "code": "PJ",
+      "category": "Kalender",
+      "subcategory": "DINDING"
+    },
+    {
+      "code": "PK",
+      "category": "Kalender",
+      "subcategory": "DINDING"
+    },
+    {
+      "code": "PM",
+      "category": "Kalender",
+      "subcategory": "DINDING"
+    },
+    {
+      "code": "PV",
+      "category": "Kalender",
+      "subcategory": "DINDING"
+    },
+    {
+      "code": "RZ",
+      "category": "Kalender",
+      "subcategory": "DINDING"
+    },
+    {
+      "code": "VD",
+      "category": "Kalender",
+      "subcategory": "DINDING"
+    },
+    {
+      "code": "FY",
+      "category": "Kalender",
+      "subcategory": "KAYU"
+    },
+    {
+      "code": "FT",
+      "category": "Kalender",
+      "subcategory": "KAYU"
+    },
+    {
+      "code": "KF",
+      "category": "Kalender",
+      "subcategory": "KAYU"
+    },
+    {
+      "code": "VC",
+      "category": "Kalender",
+      "subcategory": "KAYU"
+    },
+    {
+      "code": "MB",
+      "category": "Kalender",
+      "subcategory": "KAYU"
+    },
+    {
+      "code": "SG1",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SG2",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SG3",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SG4",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SG5",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SG6",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SG7",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SM1",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SM2",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SM3",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SM4",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SM5",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SM6",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SM7",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SM8",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SM9",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SM10",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SM11",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SM12",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SM13",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SM14",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SM15",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SM16",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SB1",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SB2",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SB3",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SB4",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SB5",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SB6",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SB7",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SB8",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SB9",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SB10",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SB11",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SB12",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SB13",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SB14",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SB15",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SB16",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SY1",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SY2",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SY3",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SY4",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SY5",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SY6",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SY7",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SY8",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SY9",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SY10",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SY11",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SY12",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SY13",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SY14",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SY15",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "NC1",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "NC2",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "NC3",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "NC4",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "NC5",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "NC6",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "NC7",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "NC8",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "NC9",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "NC10",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SK1",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SK2",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SK3",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SK4",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SK5",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SK6",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SK7",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SK8",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SK9",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SV1",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SV2",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SV3",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SV4",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SV5",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "SV6",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "EB1",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "EB2",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "EB3",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "EB4",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "EB5",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "EB6",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "DV1",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "DV2",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "DV3",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "DV4",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "DV5",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "DV6",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "DV7",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "DV8",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "DV9",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "DV10",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "DW1",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "DW2",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "DW3",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "DW4",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "DW5",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "DW6",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "DT1",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "DT2",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "DT3",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "DT4",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "DT5",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "DT6",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "DT7",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "DT8",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "DN1",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "DN2",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "DN3",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "DN4",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "DN5",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "DN6",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "LP",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "LC",
+      "category": "Cover",
+      "subcategory": "SAMPUL"
+    },
+    {
+      "code": "LX1",
+      "category": "Cover",
+      "subcategory": "STIKER"
+    },
+    {
+      "code": "LX2",
+      "category": "Cover",
+      "subcategory": "STIKER"
+    },
+    {
+      "code": "LX3",
+      "category": "Cover",
+      "subcategory": "STIKER"
+    },
+    {
+      "code": "LX4",
+      "category": "Cover",
+      "subcategory": "STIKER"
+    },
+    {
+      "code": "LX5",
+      "category": "Cover",
+      "subcategory": "STIKER"
+    },
+    {
+      "code": "LX6",
+      "category": "Cover",
+      "subcategory": "STIKER"
+    },
+    {
+      "code": "LX7",
+      "category": "Cover",
+      "subcategory": "STIKER"
+    },
+    {
+      "code": "LX8",
+      "category": "Cover",
+      "subcategory": "STIKER"
+    },
+    {
+      "code": "JL1",
+      "category": "Cover",
+      "subcategory": "POSTER"
+    },
+    {
+      "code": "JL2",
+      "category": "Cover",
+      "subcategory": "POSTER"
+    },
+    {
+      "code": "JL3",
+      "category": "Cover",
+      "subcategory": "POSTER"
+    },
+    {
+      "code": "JL4",
+      "category": "Cover",
+      "subcategory": "POSTER"
+    },
+    {
+      "code": "JL5",
+      "category": "Cover",
+      "subcategory": "POSTER"
+    },
+    {
+      "code": "JL6",
+      "category": "Cover",
+      "subcategory": "POSTER"
+    },
+    {
+      "code": "JL7",
+      "category": "Cover",
+      "subcategory": "POSTER"
+    },
+    {
+      "code": "JL8",
+      "category": "Cover",
+      "subcategory": "POSTER"
+    },
+    {
+      "code": "JL9",
+      "category": "Cover",
+      "subcategory": "POSTER"
+    },
+    {
+      "code": "JL10",
+      "category": "Cover",
+      "subcategory": "POSTER"
+    },
+    {
+      "code": "JL11",
+      "category": "Cover",
+      "subcategory": "POSTER"
+    },
+    {
+      "code": "JL12",
+      "category": "Cover",
+      "subcategory": "POSTER"
+    },
+    {
+      "code": "JH1",
+      "category": "Cover",
+      "subcategory": "POSTER"
+    },
+    {
+      "code": "JH2",
+      "category": "Cover",
+      "subcategory": "POSTER"
+    },
+    {
+      "code": "JH3",
+      "category": "Cover",
+      "subcategory": "POSTER"
+    },
+    {
+      "code": "EP1",
+      "category": "Cover",
+      "subcategory": "POSTER"
+    },
+    {
+      "code": "EP2",
+      "category": "Cover",
+      "subcategory": "POSTER"
+    },
+    {
+      "code": "EP3",
+      "category": "Cover",
+      "subcategory": "POSTER"
+    },
+    {
+      "code": "EP4",
+      "category": "Cover",
+      "subcategory": "POSTER"
+    },
+    {
+      "code": "EP5",
+      "category": "Cover",
+      "subcategory": "POSTER"
+    },
+    {
+      "code": "AT1",
+      "category": "Cover",
+      "subcategory": "STIKER"
+    },
+    {
+      "code": "AT2",
+      "category": "Cover",
+      "subcategory": "STIKER"
+    },
+    {
+      "code": "AT3",
+      "category": "Cover",
+      "subcategory": "STIKER"
+    },
+    {
+      "code": "AT4",
+      "category": "Cover",
+      "subcategory": "STIKER"
+    },
+    {
+      "code": "AT5",
+      "category": "Cover",
+      "subcategory": "STIKER"
+    },
+    {
+      "code": "AT6",
+      "category": "Cover",
+      "subcategory": "STIKER"
+    },
+    {
+      "code": "EDU1",
+      "category": "Cover",
+      "subcategory": "POSTER"
+    },
+    {
+      "code": "EDU2",
+      "category": "Cover",
+      "subcategory": "POSTER"
+    },
+    {
+      "code": "EDU3",
+      "category": "Cover",
+      "subcategory": "POSTER"
+    },
+    {
+      "code": "EDU4",
+      "category": "Cover",
+      "subcategory": "POSTER"
+    }
+  ]
+}
