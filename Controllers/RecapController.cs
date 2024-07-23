@@ -126,9 +126,8 @@ namespace OrdersRecap.Controllers
                 int tmpQty = Convert.ToInt32(x.tempQty);
 
                 DataRecord data = new DataRecord();
-                //data.no = CounterRow;
                 data.originalVariant = tmpVariant;
-                data.variant = tmpVariant.Contains(',') ? tmpVariant.Split(',')[0].Trim() : tmpVariant;
+                data.variant = tmpVariant.Contains(',') ? tmpVariant.Split(',')[0].Trim().Replace(" ", "") : tmpVariant;
 
                 var regex = new Regex(@"([A-Za-z]+)(\d*)");
                 var match = regex.Match(data.variant);
@@ -148,14 +147,18 @@ namespace OrdersRecap.Controllers
                     //No = index + 1,
                     Variant = g.Key.variant,
                     SubVariant = g.Key.subVariant,
-                    TotalQuantity = g.Sum(d => d.quantity)
+                    TotalQuantity = g.Sum(d => d.quantity),
+                    TotalPcs = g.Sum(d => (d.subVariant.Contains("Sidu") || d.subVariant.Contains("Bigboss") || d.variant.Contains("Sidu") || d.variant.Contains("Bigboss")) ? d.quantity * 6 : d.quantity * 1)
                 })
-                .OrderBy(s => s.Variant)
-                .ThenBy(s => s.SubVariant)
-            .ToList();
+                .OrderBy(s => s.SubVariant)
+                .ThenBy(s => s.TotalPcs)
+                .ThenBy(s => s.Variant)
+                .ToList();
 
             dataContainer.SD = dataContainer.summaryRecords.Where(d => d.SubVariant.Contains("Sidu") || d.Variant.Contains("Sidu")).Sum(d => d.TotalQuantity);
             dataContainer.BB = dataContainer.summaryRecords.Where(d => d.SubVariant.Contains("Bigboss") || d.Variant.Contains("Bigboss")).Sum(d => d.TotalQuantity);
+            dataContainer.SDpcs = (dataContainer.SD) * 6;
+            dataContainer.BBpcs = (dataContainer.BB) * 6;
 
             return View(dataContainer);
         }

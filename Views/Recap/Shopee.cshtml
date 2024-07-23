@@ -48,6 +48,9 @@
                 Total Quantity (Sum)
                 @* <a asp-action="Shopee" asp-route-sortOrder="@ViewData["QuantityParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Total Quantity (Sum)</a> *@
             </th>
+            <th>
+                Total Pcs
+            </th>
         </tr>
     </thead>
     <tbody>
@@ -71,15 +74,18 @@
                     <td>
                         @Html.DisplayFor(modelItem => item.TotalQuantity)
                     </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TotalPcs)
+                    </td>
                 </tr>
             }
         }
     </tbody>
 </table>
 
-Total Sidu (SD) = @(Model.summaryRecords.Count != 0 ? @Model.SD : "")
+Total Sidu (SD) = @(Model.summaryRecords.Count != 0 ? @Model.SD : "") (@(Model.summaryRecords.Count != 0 ? @Model.SDpcs : ""))
 <br />
-Total Bigboss (BB) = @(Model.summaryRecords.Count != 0 ? @Model.BB : "")
+Total Bigboss (BB) = @(Model.summaryRecords.Count != 0 ? @Model.BB : "") (@(Model.summaryRecords.Count != 0 ? @Model.BBpcs : ""))
 
 @* @{
     var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";

@@ -26,6 +26,7 @@
         public string? VariantNumber { get; set; }
         public string? SubVariant { get; set; }
         public int TotalQuantity { get; set; }
+        public int TotalPcs { get; set; }
     }
 
     public class Sampul
@@ -38,6 +39,8 @@
     {
         public int SD { get; set; }
         public int BB { get; set; }
+        public int SDpcs { get; set; }
+        public int BBpcs { get; set; }
         public IList<DataRecord> dataRecords { get; set; }
         public IList<SummaryRecord> summaryRecords { get; set; }
 
