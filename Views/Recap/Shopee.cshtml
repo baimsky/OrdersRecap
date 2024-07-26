@@ -1,6 +1,12 @@
 ﻿@* @model PaginatedList<OrdersRecap.Models.SummaryRecord> *@
 @model OrdersRecap.Models.DataContainer
 
+@{
+    ViewData["Title"] = "Shopee Recap";
+}
+
+<h2>Shopee Recap</h2>
+
 <form enctype="multipart/form-data" method="post">
     <label for="file"></label>
     <input type="file" name="file" id="file" />
@@ -30,7 +36,11 @@
     </div>
 </form> *@
 
-<table class="table">
+<br />
+<input type="text" id="searchBox" placeholder="Search..." class="form-control mb-3" />
+<br />
+
+<table class="table" id="shopeeTable">
     <thead>
         <tr>
             <th>
@@ -106,3 +116,17 @@ Total Bigboss (BB) = @(Model.summaryRecords.Count != 0 ? @Model.BB : "") (@(Mode
    class="btn btn-default @nextDisabled">
     Next
 </a> *@
+
+@section Scripts {
+    <script src="~/js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#searchBox").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#shopeeTable tbody tr").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+}
