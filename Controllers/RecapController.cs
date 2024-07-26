@@ -1,10 +1,8 @@
-﻿using DocumentFormat.OpenXml.Vml;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using OrdersRecap.Models;
 using OrdersRecap.Services;
 using System.Data;
-using System.Numerics;
 using System.Text.RegularExpressions;
 
 namespace OrdersRecap.Controllers
@@ -13,6 +11,8 @@ namespace OrdersRecap.Controllers
     {
         private readonly ExcelReader _excelReader;
         private readonly ILogger<RecapController> _logger;
+        private readonly string _masterFilePath = Path.Combine(Directory.GetCurrentDirectory(), "JSON", "master.json");
+        private readonly string _stockFilePath = Path.Combine(Directory.GetCurrentDirectory(), "JSON", "stock.json");
 
         public RecapController(ILogger<RecapController> logger)
         {
@@ -161,6 +161,34 @@ namespace OrdersRecap.Controllers
             dataContainer.BBpcs = (dataContainer.BB) * 6;
 
             return View(dataContainer);
+        }
+
+        public IActionResult Stock()
+        {
+            var stocks = GetStocks();
+            stocks = stocks.OrderBy(x => x.variant).ToList();
+            return View(stocks);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(List<Stock> stocks)
+        {
+            SaveStocks(stocks);
+            return RedirectToAction("Stock");
+        }
+
+        public List<Stock> GetStocks()
+        {
+            var jsonData = System.IO.File.ReadAllText(_stockFilePath);
+            var stocksData = JsonConvert.DeserializeObject<Stocks>(jsonData);
+            return (List<Stock>)(stocksData?.stocks ?? new List<Stock>());
+        }
+
+        public void SaveStocks(List<Stock> stocks)
+        {
+            var stocksData = new Stocks { stocks = stocks };
+            var jsonData = JsonConvert.SerializeObject(stocksData, Formatting.Indented);
+            System.IO.File.WriteAllText(_stockFilePath, jsonData);
         }
     }
 }

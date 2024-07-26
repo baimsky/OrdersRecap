@@ -1,0 +1,1594 @@
+{
+  "stocks": [
+    {
+      "variant": "AES",
+      "subVariant": null,
+      "stock": 3
+    },
+    {
+      "variant": "AT1",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "AT2",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "AT3",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "AT4",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "AT5",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "AT6",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "Bigboss",
+      "subVariant": null,
+      "stock": 1
+    },
+    {
+      "variant": "BTS",
+      "subVariant": null,
+      "stock": 2
+    },
+    {
+      "variant": "CF",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "DC",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "DF",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "DL",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "DN1",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "DN1",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "DN2",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "DN2",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "DN3",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "DN3",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "DN4",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "DN4",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "DN5",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "DN5",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "DN6",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "DN6",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "DT1",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "DT1",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "DT2",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "DT2",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "DT3",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "DT3",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "DT4",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "DT4",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "DT5",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "DT5",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "DT6",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "DT6",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "DT7",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "DT7",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "DT8",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "DT8",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "DV1",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "DV1",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "DV10",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "DV10",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "DV2",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "DV2",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "DV3",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "DV3",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "DV4",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "DV4",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "DV5",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "DV5",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "DV6",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "DV6",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "DV7",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "DV7",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "DV8",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "DV8",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "DV9",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "DV9",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "DW1",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "DW1",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "DW2",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "DW2",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "DW3",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "DW3",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "DW4",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "DW4",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "DW5",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "DW5",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "DW6",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "DW6",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "EB1",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "EB1",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "EB2",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "EB2",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "EB3",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "EB3",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "EB4",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "EB4",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "EB5",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "EB5",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "EB6",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "EB6",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "EDU1",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "EDU2",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "EDU3",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "EDU4",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "EP1",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "EP2",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "EP3",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "EP4",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "EP5",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "FB",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "FE",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "FK",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "FM",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "FP",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "FT",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "FY",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "GH",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "GL",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "HF",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "HM",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "HW",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "HY",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "JC",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "JH1",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "JH2",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "JH3",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "JL1",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "JL10",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "JL11",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "JL12",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "JL2",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "JL3",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "JL4",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "JL5",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "JL6",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "JL7",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "JL8",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "JL9",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "JM",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "KF",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "KM",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "KS",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "KV",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "LC",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "LC",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "LC",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "LM",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "LP",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "LP",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "LP",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "LX1",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "LX2",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "LX3",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "LX4",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "LX5",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "LX6",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "LX7",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "LX8",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "MA",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "MB",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "MB",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "NC1",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "NC1",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "NC10",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "NC10",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "NC2",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "NC2",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "NC3",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "NC3",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "NC4",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "NC4",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "NC5",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "NC5",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "NC6",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "NC6",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "NC7",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "NC7",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "NC8",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "NC8",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "NC9",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "NC9",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "PF",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "PJ",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "PK",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "PL",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "PM",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "PV",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "RZ",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "SB1",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SB1",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SB10",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SB10",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SB11",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SB11",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SB12",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SB12",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SB13",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SB13",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SB14",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SB14",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SB15",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SB15",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SB16",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SB16",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SB2",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SB2",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SB3",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SB3",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SB4",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SB4",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SB5",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SB5",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SB6",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SB6",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SB7",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SB7",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SB8",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SB8",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SB9",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SB9",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SE",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "SG1",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SG1",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SG2",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SG2",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SG3",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SG3",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SG4",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SG4",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SG5",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SG5",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SG6",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SG6",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SG7",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SG7",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "Sidu",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "SK1",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SK1",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SK2",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SK2",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SK3",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SK3",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SK4",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SK4",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SK5",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SK5",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SK6",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SK6",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SK7",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SK7",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SK8",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SK8",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SK9",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SK9",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SM1",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SM1",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SM10",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SM10",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SM11",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SM11",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SM12",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SM12",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SM13",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SM13",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SM14",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SM14",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SM15",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SM15",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SM16",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SM16",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SM2",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SM2",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SM3",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SM3",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SM4",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SM4",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SM5",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SM5",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SM6",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SM6",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SM7",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SM7",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SM8",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SM8",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SM9",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SM9",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SV1",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SV1",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SV2",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SV2",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SV3",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SV3",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SV4",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SV4",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SV5",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SV5",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SV6",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SV6",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SY1",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SY1",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SY10",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SY10",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SY11",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SY11",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SY12",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SY12",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SY13",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SY13",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SY14",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SY14",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SY15",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SY15",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SY2",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SY2",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SY3",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SY3",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SY4",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SY4",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SY5",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SY5",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SY6",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SY6",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SY7",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SY7",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SY8",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SY8",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "SY9",
+      "subVariant": "SD",
+      "stock": 0
+    },
+    {
+      "variant": "SY9",
+      "subVariant": "BB",
+      "stock": 0
+    },
+    {
+      "variant": "VC",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "VD",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "VT",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "WP",
+      "subVariant": null,
+      "stock": 0
+    },
+    {
+      "variant": "ZE",
+      "subVariant": null,
+      "stock": 1
+    }
+  ]
+}
