@@ -10,9 +10,11 @@
     ViewData["Title"] = "Master Data";
 }
 
-<h2>Master List</h2>
+<h2>Master Data List</h2>
 
-<table class="table">
+<input type="text" id="searchBox" placeholder="Search..." class="form-control mb-3" />
+
+<table class="table" id="masterTable">
     <thead>
         <tr>
             <th>
@@ -55,3 +57,17 @@
         }
     </tbody>
 </table>
+
+@section Scripts {
+    <script src="~/js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#searchBox").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#masterTable tbody tr").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+}

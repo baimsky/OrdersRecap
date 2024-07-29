@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using OrdersRecap.Models;
 using OrdersRecap.Services;
@@ -9,21 +10,27 @@ namespace OrdersRecap.Controllers
 {
     public class RecapController : Controller
     {
-        private readonly ExcelReader _excelReader;
+        private readonly IExcelReader _excelReader;
         private readonly ILogger<RecapController> _logger;
-        private readonly string _masterFilePath = Path.Combine(Directory.GetCurrentDirectory(), "JSON", "master.json");
-        private readonly string _stockFilePath = Path.Combine(Directory.GetCurrentDirectory(), "JSON", "stock.json");
+        private readonly IConfiguration _configuration;
+        private readonly IStock _stockService;
+        private readonly IMaster _masterService;
 
-        public RecapController(ILogger<RecapController> logger)
+        public RecapController(
+            IExcelReader excelReader,
+            ILogger<RecapController> logger,
+            IConfiguration configuration,
+            IStock stockService,
+            IMaster masterService)
         {
-            _excelReader = new ExcelReader();
+            _excelReader = excelReader;
             _logger = logger;
+            _configuration = configuration;
+            _stockService = stockService;
+            _masterService = masterService;
         }
 
-        public IActionResult Index()
-        {
-            return View();
-        }
+        public IActionResult Index() => View();
 
         public async Task<IActionResult> Shopee() //string sortOrder, string currentFilter, string searchString, int? pageNumber
         {
@@ -74,27 +81,10 @@ namespace OrdersRecap.Controllers
             return View(dataContainer);
         }
 
-        public IActionResult MasterData()
+        public async Task<IActionResult> MasterData()
         {
-            using (StreamReader r = new StreamReader("JSON/master.json"))
-            {
-                string json = r.ReadToEnd();
-                var mastersData = JsonConvert.DeserializeObject<Masters>(json);
-                mastersData.masters.OrderBy(x => x.Code);
-                return View(mastersData);
-            }
-        }
-
-        public Masters getMasterData()
-        {
-            Masters masters = new Masters();
-            using (StreamReader r = new StreamReader("JSON/master.json"))
-            {
-                string json = r.ReadToEnd();
-                masters = JsonConvert.DeserializeObject<Masters>(json);
-                masters.masters.OrderBy(x => x.Code);
-                return masters;
-            }
+            var mastersData = await _masterService.GetMasterDataAsync();
+            return View(mastersData);
         }
 
         [HttpPost]
@@ -103,22 +93,36 @@ namespace OrdersRecap.Controllers
             if (file == null || file.Length == 0)
                 return BadRequest("File is empty.");
 
-            string filePath = System.IO.Path.Combine(Directory.GetCurrentDirectory(), "Attachment", file.FileName);
-
-            if (System.IO.File.Exists(filePath))
+            try
             {
-                System.IO.File.Delete(filePath);
+                string filePath = await SaveFileAsync(file);
+                var tempData = await _excelReader.ReadExcelFileAsync(filePath);
+                var dataContainer = ProcessShopeeData(tempData);
+                return View(dataContainer);
             }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error processing Shopee data");
+                return StatusCode(500, "An error occurred while processing the file.");
+            }
+        }
+
+        private async Task<string> SaveFileAsync(IFormFile file)
+        {
+            string uploadsFolder = _configuration["UploadFilePath"];
+            string filePath = Path.Combine(uploadsFolder, file.FileName);
 
             using (var stream = new FileStream(filePath, FileMode.Create))
             {
                 await file.CopyToAsync(stream);
             }
 
-            ViewBag.Message = "Files are successfully uploaded";
+            return filePath;
+        }
 
+        private DataContainer ProcessShopeeData(List<Record> tempData)
+        {
             List<DataRecord> listData = new List<DataRecord>();
-            List<Record> tempData = _excelReader.ReadExcelFile(filePath);
 
             foreach (var x in tempData)
             {
@@ -160,35 +164,20 @@ namespace OrdersRecap.Controllers
             dataContainer.SDpcs = (dataContainer.SD) * 6;
             dataContainer.BBpcs = (dataContainer.BB) * 6;
 
-            return View(dataContainer);
+            return dataContainer;
         }
 
-        public IActionResult Stock()
+        public async Task<IActionResult> Stock()
         {
-            var stocks = GetStocks();
-            stocks = stocks.OrderBy(x => x.variant).ToList();
+            var stocks = await _stockService.GetStocksAsync();
             return View(stocks);
         }
 
         [HttpPost]
-        public IActionResult Edit(List<Stock> stocks)
+        public async Task<IActionResult> Edit(List<Stock> stocks)
         {
-            SaveStocks(stocks);
+            await _stockService.SaveStocksAsync(stocks);
             return RedirectToAction("Stock");
-        }
-
-        public List<Stock> GetStocks()
-        {
-            var jsonData = System.IO.File.ReadAllText(_stockFilePath);
-            var stocksData = JsonConvert.DeserializeObject<Stocks>(jsonData);
-            return (List<Stock>)(stocksData?.stocks ?? new List<Stock>());
-        }
-
-        public void SaveStocks(List<Stock> stocks)
-        {
-            var stocksData = new Stocks { stocks = stocks };
-            var jsonData = JsonConvert.SerializeObject(stocksData, Formatting.Indented);
-            System.IO.File.WriteAllText(_stockFilePath, jsonData);
         }
     }
 }

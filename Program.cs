@@ -1,3 +1,5 @@
+using OrdersRecap.Services;
+
 namespace OrdersRecap
 {
     public class Program
@@ -8,6 +10,16 @@ namespace OrdersRecap
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            // Add configuration
+            builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
+            builder.Configuration.AddJsonFile($"appsettings.{builder.Environment.EnvironmentName}.json", optional: true);
+            builder.Configuration.AddEnvironmentVariables();
+
+            // Register services
+            builder.Services.AddScoped<IExcelReader, ExcelReaderService>();
+            builder.Services.AddScoped<IStock, StockService>();
+            builder.Services.AddScoped<IMaster, MasterService>();
 
             var app = builder.Build();
 
