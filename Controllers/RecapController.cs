@@ -15,19 +15,22 @@ namespace OrdersRecap.Controllers
         private readonly IConfiguration _configuration;
         private readonly IStock _stockService;
         private readonly IMaster _masterService;
+        private readonly IRecap _recapService;
 
         public RecapController(
             IExcelReader excelReader,
             ILogger<RecapController> logger,
             IConfiguration configuration,
             IStock stockService,
-            IMaster masterService)
+            IMaster masterService,
+            IRecap recapService)
         {
             _excelReader = excelReader;
             _logger = logger;
             _configuration = configuration;
             _stockService = stockService;
             _masterService = masterService;
+            _recapService = recapService;
         }
 
         public IActionResult Index() => View();
@@ -51,7 +54,9 @@ namespace OrdersRecap.Controllers
             //ViewData["CurrentFilter"] = searchString;
 
             //List<SummaryRecord> summary = new List<SummaryRecord>();
-            DataContainer dataContainer = new DataContainer();
+
+            //DataContainer dataContainer = new DataContainer();
+            var dataContainer = await Task.FromResult(new DataContainer());
 
             //if (!String.IsNullOrEmpty(searchString))
             //{
@@ -97,7 +102,8 @@ namespace OrdersRecap.Controllers
             {
                 string filePath = await SaveFileAsync(file);
                 var tempData = await _excelReader.ReadExcelFileAsync(filePath);
-                var dataContainer = ProcessShopeeData(tempData);
+                var dataContainer = await ProcessShopeeDataAsync(tempData);
+                ViewBag.DataList = dataContainer;
                 return View(dataContainer);
             }
             catch (Exception ex)
@@ -117,54 +123,157 @@ namespace OrdersRecap.Controllers
                 await file.CopyToAsync(stream);
             }
 
+            ViewBag.Message = "Files are successfully uploaded";
+
             return filePath;
         }
 
-        private DataContainer ProcessShopeeData(List<Record> tempData)
+        //private DataContainer ProcessShopeeData(List<Record> tempData)
+        //{
+        //    List<DataRecord> listData = new List<DataRecord>();
+        //    var mastersData = _masterService.GetMasterDataAsync();
+
+        //    foreach (var x in tempData)
+        //    {
+        //        string tmpVariant = x.tempProduct;
+        //        int tmpQty = Convert.ToInt32(x.tempQty);
+
+        //        DataRecord data = new DataRecord();
+        //        data.originalVariant = tmpVariant;
+        //        data.variant = tmpVariant.Contains(',') ? tmpVariant.Split(',')[0].Trim().Replace(" ", "") : tmpVariant;
+
+        //        var regex = new Regex(@"([A-Za-z]+)(\d*)");
+        //        var match = regex.Match(data.variant);
+        //        data.variantName = match.Groups[1].Value;
+        //        data.variantNumber = match.Groups[2].Value;
+
+        //        data.subVariant = tmpVariant.Contains(',') ? tmpVariant.Split(',')[1] : "";
+        //        data.quantity = tmpQty;
+        //        data.paperType = mastersData.Result.masters.Where(y => y.Code == data.variant).Select(y => y.PaperType).FirstOrDefault().ToString();
+
+        //        listData.Add(data);
+        //    }
+
+        //    var dataContainer = new DataContainer();
+        //    dataContainer.summaryRecords = listData
+        //        .GroupBy(d => new { d.variant, d.subVariant }) // d.variant, d.subVariant, d.paperType
+        //        .Select(g => new SummaryRecord //(g, index)
+        //        {
+        //            //No = index + 1,
+        //            Variant = g.Key.variant,
+        //            SubVariant = g.Key.subVariant,
+        //            TotalQuantity = g.Sum(d => d.quantity),
+        //            TotalPcs = g.Sum(d => (d.subVariant.Contains("Sidu") || d.subVariant.Contains("Bigboss") || d.variant.Contains("Sidu") || d.variant.Contains("Bigboss")) ? d.quantity * 6 : d.quantity * 1),
+        //            PaperType = g.First().paperType
+        //        })
+        //        .OrderBy(s => s.SubVariant)
+        //        .ThenBy(s => s.TotalPcs)
+        //        .ThenBy(s => s.Variant)
+        //        .ToList();
+
+        //    dataContainer.SD = dataContainer.summaryRecords.Where(d => d.SubVariant.Contains("Sidu") || d.Variant.Contains("Sidu")).Sum(d => d.TotalQuantity);
+        //    dataContainer.BB = dataContainer.summaryRecords.Where(d => d.SubVariant.Contains("Bigboss") || d.Variant.Contains("Bigboss")).Sum(d => d.TotalQuantity);
+        //    dataContainer.SDpcs = (dataContainer.SD) * 6;
+        //    dataContainer.BBpcs = (dataContainer.BB) * 6;
+
+        //    return dataContainer;
+        //}
+
+        private async Task<DataContainer> ProcessShopeeDataAsync(List<Record> tempData)
         {
-            List<DataRecord> listData = new List<DataRecord>();
+            var mastersData = await _masterService.GetMasterDataAsync();
+            var mastersDictionary = mastersData.masters.ToDictionary(m => m.Code);
 
-            foreach (var x in tempData)
+            /// check Dictionary if master.Code contains duplicate
+            //var mastersDictionary = new Dictionary<string, Master>();
+            //foreach (var master in mastersData.masters)
+            //{
+            //    if (!mastersDictionary.TryAdd(master.Code, master))
+            //    {
+            //        _logger.LogWarning($"Duplicate master code found: {master.Code}");
+            //    }
+            //}
+
+            var listData = tempData.Select(x =>
             {
-                string tmpVariant = x.tempProduct;
-                int tmpQty = Convert.ToInt32(x.tempQty);
+                var tmpVariant = x.tempProduct;
+                var variantParts = tmpVariant.Split(',');
+                var variant = variantParts[0].Trim().Replace(" ", "");
+                var tmpSubVariant = variantParts.Length > 1 ? variantParts[1].Trim().Replace(" ", "") : "";
+                var match = VariantRegex.Match(variant);
 
-                DataRecord data = new DataRecord();
-                data.originalVariant = tmpVariant;
-                data.variant = tmpVariant.Contains(',') ? tmpVariant.Split(',')[0].Trim().Replace(" ", "") : tmpVariant;
-
-                var regex = new Regex(@"([A-Za-z]+)(\d*)");
-                var match = regex.Match(data.variant);
-                data.variantName = match.Groups[1].Value;
-                data.variantNumber = match.Groups[2].Value;
-
-                data.subVariant = tmpVariant.Contains(',') ? tmpVariant.Split(',')[1] : "";
-                data.quantity = tmpQty;
-                listData.Add(data);
-            }
-
-            var dataContainer = new DataContainer();
-            dataContainer.summaryRecords = listData
-                .GroupBy(d => new { d.variant, d.subVariant })
-                .Select(g => new SummaryRecord //(g, index)
+                if (!mastersDictionary.TryGetValue(variant, out var masterDatas))
                 {
-                    //No = index + 1,
-                    Variant = g.Key.variant,
-                    SubVariant = g.Key.subVariant,
-                    TotalQuantity = g.Sum(d => d.quantity),
-                    TotalPcs = g.Sum(d => (d.subVariant.Contains("Sidu") || d.subVariant.Contains("Bigboss") || d.variant.Contains("Sidu") || d.variant.Contains("Bigboss")) ? d.quantity * 6 : d.quantity * 1)
-                })
-                .OrderBy(s => s.SubVariant)
-                .ThenBy(s => s.TotalPcs)
-                .ThenBy(s => s.Variant)
-                .ToList();
+                    // Handle the case where the variant is not found in the master data
+                    //return null;
+                    _logger.LogWarning($"Variant not found in master data: {variant}");
+                }
 
-            dataContainer.SD = dataContainer.summaryRecords.Where(d => d.SubVariant.Contains("Sidu") || d.Variant.Contains("Sidu")).Sum(d => d.TotalQuantity);
-            dataContainer.BB = dataContainer.summaryRecords.Where(d => d.SubVariant.Contains("Bigboss") || d.Variant.Contains("Bigboss")).Sum(d => d.TotalQuantity);
-            dataContainer.SDpcs = (dataContainer.SD) * 6;
-            dataContainer.BBpcs = (dataContainer.BB) * 6;
+                // Try to get masterData, but proceed even if it's not found
+                mastersDictionary.TryGetValue(variant, out var masterData);
+
+                Detail? detail = null;
+                if (masterData != null && masterData.Details != null)
+                {
+                    detail = !string.IsNullOrEmpty(tmpSubVariant)
+                                ? masterData.Details.FirstOrDefault(d => d.SubVariant == tmpSubVariant)
+                                : masterData.Details.FirstOrDefault();
+                }
+
+                return new DataRecord
+                {
+                    originalVariant = tmpVariant,
+                    variant = variant,
+                    variantName = match.Groups[1].Value,
+                    variantNumber = match.Groups[2].Value,
+                    subVariant = detail?.SubVariant ?? tmpSubVariant ?? "",
+                    quantity = Convert.ToInt32(x.tempQty),
+                    baseQuantity = masterData?.BaseQuantity ?? 1, 
+                    paperType = detail?.PaperType ?? masterData?.PaperType ?? "Unknown"
+                };
+            })
+            //.Where(d => d != null)
+            .ToList();
+
+            var dataContainer = new DataContainer
+            {
+                summaryRecords = listData
+                    .GroupBy(d => new { d.variant, d.subVariant })
+                    .Select(g => new SummaryRecord
+                    {
+                        Variant = g.Key.variant,
+                        SubVariant = g.Key.subVariant,
+                        TotalQuantity = g.Sum(d => d.quantity),
+                        TotalPcs = g.Sum(d => d.quantity * d.baseQuantity),
+                        PaperType = g.First().paperType
+                    })
+                    .OrderBy(s => s.SubVariant)
+                    .ThenBy(s => s.TotalPcs)
+                    .ThenBy(s => s.Variant)
+                    .ToList()
+            };
+
+            dataContainer.SD = dataContainer.summaryRecords.Where(d => IsSidu(d.SubVariant) || IsSidu(d.Variant)).Sum(d => d.TotalQuantity);
+            dataContainer.BB = dataContainer.summaryRecords.Where(d => IsBigboss(d.SubVariant) || IsBigboss(d.Variant)).Sum(d => d.TotalQuantity);
+            dataContainer.SDpcs = dataContainer.summaryRecords.Where(d => IsSidu(d.SubVariant) || IsSidu(d.Variant)).Sum(d => d.TotalPcs);
+            dataContainer.BBpcs = dataContainer.summaryRecords.Where(d => IsBigboss(d.SubVariant) || IsBigboss(d.Variant)).Sum(d => d.TotalPcs);
 
             return dataContainer;
+        }
+
+        private bool IsSiduOrBigboss(string value) => IsSidu(value) || IsBigboss(value);
+        private bool IsSidu(string value) => value.Contains("Sidu", StringComparison.OrdinalIgnoreCase);
+        private bool IsBigboss(string value) => value.Contains("Bigboss", StringComparison.OrdinalIgnoreCase);
+        private static readonly Regex VariantRegex = new Regex(@"([A-Za-z]+)(\d*)", RegexOptions.Compiled);
+
+
+        [HttpPost]
+        public async Task<IActionResult> Recap(string DataListJson)
+        {
+            DataContainer? dataContainer = JsonConvert.DeserializeObject<DataContainer>(DataListJson);
+            _recapService.OrganizeFiles(dataContainer);
+            ViewBag.DataList = dataContainer;
+            return View("Shopee", dataContainer);
         }
 
         public async Task<IActionResult> Stock()

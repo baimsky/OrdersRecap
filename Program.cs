@@ -20,6 +20,7 @@ namespace OrdersRecap
             builder.Services.AddScoped<IExcelReader, ExcelReaderService>();
             builder.Services.AddScoped<IStock, StockService>();
             builder.Services.AddScoped<IMaster, MasterService>();
+            builder.Services.AddScoped<IRecap, RecapService>();
 
             var app = builder.Build();
 
@@ -41,12 +42,6 @@ namespace OrdersRecap
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
-
-            var uploadsDir = Path.Combine(Directory.GetCurrentDirectory(), "Attachment");
-            if (!Directory.Exists(uploadsDir))
-            {
-                Directory.CreateDirectory(uploadsDir);
-            }
 
             app.Run();
         }

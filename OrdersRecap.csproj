@@ -8,12 +8,16 @@
 
   <ItemGroup>
     <Compile Remove="Backup\**" />
+    <Compile Remove="Catalog\**" />
     <Compile Remove="Publish\**" />
     <Content Remove="Backup\**" />
+    <Content Remove="Catalog\**" />
     <Content Remove="Publish\**" />
     <EmbeddedResource Remove="Backup\**" />
+    <EmbeddedResource Remove="Catalog\**" />
     <EmbeddedResource Remove="Publish\**" />
     <None Remove="Backup\**" />
+    <None Remove="Catalog\**" />
     <None Remove="Publish\**" />
   </ItemGroup>
 

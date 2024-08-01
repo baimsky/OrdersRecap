@@ -1,989 +1,2413 @@
 {
-  "masters" : [
+  "masters": [
     {
       "code": "BTS",
       "category": "Kalender",
-      "subcategory": "MEJA"
+      "subcategory": "MEJA",
+      "basequantity": 1,
+      "papertype": "A5 100 gr"
     },
     {
       "code": "DC",
       "category": "Kalender",
-      "subcategory": "MEJA"
+      "subcategory": "MEJA",
+      "basequantity": 1,
+      "papertype": "A5 100 gr"
     },
     {
       "code": "DF",
       "category": "Kalender",
-      "subcategory": "MEJA"
+      "subcategory": "MEJA",
+      "basequantity": 1,
+      "papertype": "A5 100 gr"
     },
     {
       "code": "DL",
       "category": "Kalender",
-      "subcategory": "MEJA"
+      "subcategory": "MEJA",
+      "basequantity": 1,
+      "papertype": "A5 100 gr"
     },
     {
       "code": "FB",
       "category": "Kalender",
-      "subcategory": "MEJA"
+      "subcategory": "MEJA",
+      "basequantity": 1,
+      "papertype": "A5 100 gr"
     },
     {
       "code": "FM",
       "category": "Kalender",
-      "subcategory": "MEJA"
+      "subcategory": "MEJA",
+      "basequantity": 1,
+      "papertype": "A5 100 gr"
     },
     {
       "code": "HM",
       "category": "Kalender",
-      "subcategory": "MEJA"
+      "subcategory": "MEJA",
+      "basequantity": 1,
+      "papertype": "A5 100 gr"
     },
     {
       "code": "HW",
       "category": "Kalender",
-      "subcategory": "MEJA"
+      "subcategory": "MEJA",
+      "basequantity": 1,
+      "papertype": "A5 100 gr"
     },
     {
       "code": "HY",
       "category": "Kalender",
-      "subcategory": "MEJA"
+      "subcategory": "MEJA",
+      "basequantity": 1,
+      "papertype": "A5 100 gr"
     },
     {
       "code": "JC",
       "category": "Kalender",
-      "subcategory": "MEJA"
+      "subcategory": "MEJA",
+      "basequantity": 1,
+      "papertype": "A5 100 gr"
     },
     {
       "code": "JM",
       "category": "Kalender",
-      "subcategory": "MEJA"
+      "subcategory": "MEJA",
+      "basequantity": 1,
+      "papertype": "A5 100 gr"
     },
     {
       "code": "KM",
       "category": "Kalender",
-      "subcategory": "MEJA"
+      "subcategory": "MEJA",
+      "basequantity": 1,
+      "papertype": "A5 100 gr"
     },
     {
       "code": "KS",
       "category": "Kalender",
-      "subcategory": "MEJA"
+      "subcategory": "MEJA",
+      "basequantity": 1,
+      "papertype": "A5 100 gr"
     },
     {
       "code": "KV",
       "category": "Kalender",
-      "subcategory": "MEJA"
+      "subcategory": "MEJA",
+      "basequantity": 1,
+      "papertype": "A5 100 gr"
     },
     {
       "code": "LM",
       "category": "Kalender",
-      "subcategory": "MEJA"
+      "subcategory": "MEJA",
+      "basequantity": 1,
+      "papertype": "A5 100 gr"
     },
     {
       "code": "MB",
       "category": "Kalender",
-      "subcategory": "MEJA"
+      "subcategory": "MEJA",
+      "basequantity": 1,
+      "papertype": "A5 100 gr"
     },
     {
       "code": "PL",
       "category": "Kalender",
-      "subcategory": "MEJA"
+      "subcategory": "MEJA",
+      "basequantity": 1,
+      "papertype": "A5 100 gr"
     },
     {
       "code": "SE",
       "category": "Kalender",
-      "subcategory": "MEJA"
+      "subcategory": "MEJA",
+      "basequantity": 1,
+      "papertype": "A5 100 gr"
     },
     {
       "code": "VT",
       "category": "Kalender",
-      "subcategory": "MEJA"
+      "subcategory": "MEJA",
+      "basequantity": 1,
+      "papertype": "A5 100 gr"
     },
     {
       "code": "WP",
       "category": "Kalender",
-      "subcategory": "MEJA"
+      "subcategory": "MEJA",
+      "basequantity": 1,
+      "papertype": "A5 100 gr"
     },
     {
       "code": "ZE",
       "category": "Kalender",
-      "subcategory": "MEJA"
+      "subcategory": "MEJA",
+      "basequantity": 1,
+      "papertype": "A5 100 gr"
     },
     {
       "code": "AES",
       "category": "Kalender",
-      "subcategory": "DINDING"
+      "subcategory": "DINDING",
+      "basequantity": 1,
+      "papertype": "A3 100 gr"
     },
     {
       "code": "CF",
       "category": "Kalender",
-      "subcategory": "DINDING"
+      "subcategory": "DINDING",
+      "basequantity": 1,
+      "papertype": "A3 100 gr"
     },
     {
       "code": "FE",
       "category": "Kalender",
-      "subcategory": "DINDING"
+      "subcategory": "DINDING",
+      "basequantity": 1,
+      "papertype": "A3 100 gr"
     },
     {
       "code": "FK",
       "category": "Kalender",
-      "subcategory": "DINDING"
+      "subcategory": "DINDING",
+      "basequantity": 1,
+      "papertype": "A3 100 gr"
     },
     {
       "code": "FP",
       "category": "Kalender",
-      "subcategory": "DINDING"
+      "subcategory": "DINDING",
+      "basequantity": 1,
+      "papertype": "A3 100 gr"
     },
     {
       "code": "GH",
       "category": "Kalender",
-      "subcategory": "DINDING"
+      "subcategory": "DINDING",
+      "basequantity": 1,
+      "papertype": "A3 100 gr"
     },
     {
       "code": "GL",
       "category": "Kalender",
-      "subcategory": "DINDING"
+      "subcategory": "DINDING",
+      "basequantity": 1,
+      "papertype": "A3 100 gr"
     },
     {
       "code": "HF",
       "category": "Kalender",
-      "subcategory": "DINDING"
+      "subcategory": "DINDING",
+      "basequantity": 1,
+      "papertype": "A3 100 gr"
     },
     {
       "code": "MA",
       "category": "Kalender",
-      "subcategory": "DINDING"
+      "subcategory": "DINDING",
+      "basequantity": 1,
+      "papertype": "A3 100 gr"
     },
     {
       "code": "PF",
       "category": "Kalender",
-      "subcategory": "DINDING"
+      "subcategory": "DINDING",
+      "basequantity": 1,
+      "papertype": "A3 100 gr"
     },
     {
       "code": "PJ",
       "category": "Kalender",
-      "subcategory": "DINDING"
+      "subcategory": "DINDING",
+      "basequantity": 1,
+      "papertype": "A3 100 gr"
     },
     {
       "code": "PK",
       "category": "Kalender",
-      "subcategory": "DINDING"
+      "subcategory": "DINDING",
+      "basequantity": 1,
+      "papertype": "A3 100 gr"
     },
     {
       "code": "PM",
       "category": "Kalender",
-      "subcategory": "DINDING"
+      "subcategory": "DINDING",
+      "basequantity": 1,
+      "papertype": "A3 100 gr"
     },
     {
       "code": "PV",
       "category": "Kalender",
-      "subcategory": "DINDING"
+      "subcategory": "DINDING",
+      "basequantity": 1,
+      "papertype": "A3 100 gr"
     },
     {
       "code": "RZ",
       "category": "Kalender",
-      "subcategory": "DINDING"
+      "subcategory": "DINDING",
+      "basequantity": 1,
+      "papertype": "A3 100 gr"
     },
     {
       "code": "VD",
       "category": "Kalender",
-      "subcategory": "DINDING"
+      "subcategory": "DINDING",
+      "basequantity": 1,
+      "papertype": "A3 100 gr"
     },
     {
       "code": "FY",
       "category": "Kalender",
-      "subcategory": "KAYU"
+      "subcategory": "KAYU",
+      "basequantity": 1
     },
     {
       "code": "FT",
       "category": "Kalender",
-      "subcategory": "KAYU"
+      "subcategory": "KAYU",
+      "basequantity": 1
     },
     {
       "code": "KF",
       "category": "Kalender",
-      "subcategory": "KAYU"
+      "subcategory": "KAYU",
+      "basequantity": 1
     },
     {
       "code": "VC",
       "category": "Kalender",
-      "subcategory": "KAYU"
+      "subcategory": "KAYU",
+      "basequantity": 1
     },
     {
-      "code": "MB",
+      "code": "MB+Kayu",
       "category": "Kalender",
-      "subcategory": "KAYU"
+      "subcategory": "KAYU",
+      "basequantity": 1
     },
     {
       "code": "SG1",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SG2",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SG3",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SG4",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SG5",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SG6",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SG7",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SM1",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SM2",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SM3",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SM4",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SM5",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SM6",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SM7",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SM8",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SM9",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SM10",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SM11",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SM12",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SM13",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SM14",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SM15",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SM16",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SB1",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SB2",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SB3",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SB4",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SB5",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SB6",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SB7",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SB8",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SB9",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SB10",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SB11",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SB12",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SB13",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SB14",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SB15",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SB16",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SY1",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SY2",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SY3",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SY4",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SY5",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SY6",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SY7",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SY8",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SY9",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SY10",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SY11",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SY12",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SY13",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SY14",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SY15",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "NC1",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "NC2",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "NC3",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "NC4",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "NC5",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "NC6",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "NC7",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "NC8",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "NC9",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "NC10",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SK1",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SK2",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SK3",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SK4",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SK5",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SK6",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SK7",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SK8",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SK9",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SV1",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SV2",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SV3",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SV4",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SV5",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "SV6",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "EB1",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "EB2",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "EB3",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "EB4",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "EB5",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "EB6",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "DV1",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "DV2",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "DV3",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "DV4",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "DV5",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "DV6",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "DV7",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "DV8",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "DV9",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "DV10",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "DW1",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "DW2",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "DW3",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "DW4",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "DW5",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "DW6",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "DT1",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "DT2",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "DT3",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "DT4",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "DT5",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "DT6",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "DT7",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "DT8",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "DN1",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "DN2",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "DN3",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "DN4",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "DN5",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "DN6",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "details": [
+        {
+          "subvariant": "Sidu",
+          "papertype": "A4 100 gr"
+        },
+        {
+          "subvariant": "Bigboss",
+          "papertype": "A3 100 gr"
+        }
+      ]
     },
     {
       "code": "LP",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "papertype": "A4 100 gr"
     },
     {
       "code": "LC",
       "category": "Cover",
-      "subcategory": "SAMPUL"
+      "subcategory": "SAMPUL",
+      "basequantity": 6,
+      "papertype": "A3 100 gr"
     },
     {
       "code": "LX1",
       "category": "Cover",
-      "subcategory": "STIKER"
+      "subcategory": "STIKER",
+      "basequantity": 1,
+      "papertype": "A8 60 gr"
     },
     {
       "code": "LX2",
       "category": "Cover",
-      "subcategory": "STIKER"
+      "subcategory": "STIKER",
+      "basequantity": 1,
+      "papertype": "A8 60 gr"
     },
     {
       "code": "LX3",
       "category": "Cover",
-      "subcategory": "STIKER"
+      "subcategory": "STIKER",
+      "basequantity": 1,
+      "papertype": "A8 60 gr"
     },
     {
       "code": "LX4",
       "category": "Cover",
-      "subcategory": "STIKER"
+      "subcategory": "STIKER",
+      "basequantity": 1,
+      "papertype": "A8 60 gr"
     },
     {
       "code": "LX5",
       "category": "Cover",
-      "subcategory": "STIKER"
+      "subcategory": "STIKER",
+      "basequantity": 1,
+      "papertype": "A8 60 gr"
     },
     {
       "code": "LX6",
       "category": "Cover",
-      "subcategory": "STIKER"
+      "subcategory": "STIKER",
+      "basequantity": 1,
+      "papertype": "A8 60 gr"
     },
     {
       "code": "LX7",
       "category": "Cover",
-      "subcategory": "STIKER"
+      "subcategory": "STIKER",
+      "basequantity": 1,
+      "papertype": "A8 60 gr"
     },
     {
       "code": "LX8",
       "category": "Cover",
-      "subcategory": "STIKER"
+      "subcategory": "STIKER",
+      "basequantity": 1,
+      "papertype": "A8 60 gr"
     },
     {
       "code": "JL1",
       "category": "Cover",
-      "subcategory": "POSTER"
+      "subcategory": "POSTER",
+      "basequantity": 1,
+      "papertype": "A3 100 gr"
     },
     {
       "code": "JL2",
       "category": "Cover",
-      "subcategory": "POSTER"
+      "subcategory": "POSTER",
+      "basequantity": 1,
+      "papertype": "A3 100 gr"
     },
     {
       "code": "JL3",
       "category": "Cover",
-      "subcategory": "POSTER"
+      "subcategory": "POSTER",
+      "basequantity": 1,
+      "papertype": "A3 100 gr"
     },
     {
       "code": "JL4",
       "category": "Cover",
-      "subcategory": "POSTER"
+      "subcategory": "POSTER",
+      "basequantity": 1,
+      "papertype": "A3 100 gr"
     },
     {
       "code": "JL5",
       "category": "Cover",
-      "subcategory": "POSTER"
+      "subcategory": "POSTER",
+      "basequantity": 1,
+      "papertype": "A3 100 gr"
     },
     {
       "code": "JL6",
       "category": "Cover",
-      "subcategory": "POSTER"
+      "subcategory": "POSTER",
+      "basequantity": 1,
+      "papertype": "A3 100 gr"
     },
     {
       "code": "JL7",
       "category": "Cover",
-      "subcategory": "POSTER"
+      "subcategory": "POSTER",
+      "basequantity": 1,
+      "papertype": "A3 100 gr"
     },
     {
       "code": "JL8",
       "category": "Cover",
-      "subcategory": "POSTER"
+      "subcategory": "POSTER",
+      "basequantity": 1,
+      "papertype": "A3 100 gr"
     },
     {
       "code": "JL9",
       "category": "Cover",
-      "subcategory": "POSTER"
+      "subcategory": "POSTER",
+      "basequantity": 1,
+      "papertype": "A3 100 gr"
     },
     {
       "code": "JL10",
       "category": "Cover",
-      "subcategory": "POSTER"
+      "subcategory": "POSTER",
+      "basequantity": 1,
+      "papertype": "A3 100 gr"
     },
     {
       "code": "JL11",
       "category": "Cover",
-      "subcategory": "POSTER"
+      "subcategory": "POSTER",
+      "basequantity": 1,
+      "papertype": "A3 100 gr"
     },
     {
       "code": "JL12",
       "category": "Cover",
-      "subcategory": "POSTER"
+      "subcategory": "POSTER",
+      "basequantity": 1,
+      "papertype": "A3 100 gr"
     },
     {
       "code": "JH1",
       "category": "Cover",
-      "subcategory": "POSTER"
+      "subcategory": "POSTER",
+      "basequantity": 1,
+      "papertype": "A3 100 gr"
     },
     {
       "code": "JH2",
       "category": "Cover",
-      "subcategory": "POSTER"
+      "subcategory": "POSTER",
+      "basequantity": 1,
+      "papertype": "A3 100 gr"
     },
     {
       "code": "JH3",
       "category": "Cover",
-      "subcategory": "POSTER"
+      "subcategory": "POSTER",
+      "basequantity": 1,
+      "papertype": "A3 100 gr"
     },
     {
       "code": "EP1",
       "category": "Cover",
-      "subcategory": "POSTER"
+      "subcategory": "POSTER",
+      "basequantity": 1,
+      "papertype": "A3 100 gr"
     },
     {
       "code": "EP2",
       "category": "Cover",
-      "subcategory": "POSTER"
+      "subcategory": "POSTER",
+      "basequantity": 1,
+      "papertype": "A3 100 gr"
     },
     {
       "code": "EP3",
       "category": "Cover",
-      "subcategory": "POSTER"
+      "subcategory": "POSTER",
+      "basequantity": 1,
+      "papertype": "A3 100 gr"
     },
     {
       "code": "EP4",
       "category": "Cover",
-      "subcategory": "POSTER"
+      "subcategory": "POSTER",
+      "basequantity": 1,
+      "papertype": "A3 100 gr"
     },
     {
       "code": "EP5",
       "category": "Cover",
-      "subcategory": "POSTER"
+      "subcategory": "POSTER",
+      "basequantity": 1,
+      "papertype": "A3 100 gr"
     },
     {
       "code": "AT1",
       "category": "Cover",
-      "subcategory": "STIKER"
+      "subcategory": "STIKER",
+      "basequantity": 1,
+      "papertype": "A8 60 gr"
     },
     {
       "code": "AT2",
       "category": "Cover",
-      "subcategory": "STIKER"
+      "subcategory": "STIKER",
+      "basequantity": 1,
+      "papertype": "A8 60 gr"
     },
     {
       "code": "AT3",
       "category": "Cover",
-      "subcategory": "STIKER"
+      "subcategory": "STIKER",
+      "basequantity": 1,
+      "papertype": "A8 60 gr"
     },
     {
       "code": "AT4",
       "category": "Cover",
-      "subcategory": "STIKER"
+      "subcategory": "STIKER",
+      "basequantity": 1,
+      "papertype": "A8 60 gr"
     },
     {
       "code": "AT5",
       "category": "Cover",
-      "subcategory": "STIKER"
+      "subcategory": "STIKER",
+      "basequantity": 1,
+      "papertype": "A8 60 gr"
     },
     {
       "code": "AT6",
       "category": "Cover",
-      "subcategory": "STIKER"
+      "subcategory": "STIKER",
+      "basequantity": 1,
+      "papertype": "A8 60 gr"
     },
     {
       "code": "EDU1",
       "category": "Cover",
-      "subcategory": "POSTER"
+      "subcategory": "POSTER",
+      "basequantity": 1,
+      "papertype": "A3 100 gr"
     },
     {
       "code": "EDU2",
       "category": "Cover",
-      "subcategory": "POSTER"
+      "subcategory": "POSTER",
+      "basequantity": 1,
+      "papertype": "A3 100 gr"
     },
     {
       "code": "EDU3",
       "category": "Cover",
-      "subcategory": "POSTER"
+      "subcategory": "POSTER",
+      "basequantity": 1,
+      "papertype": "A3 100 gr"
     },
     {
       "code": "EDU4",
       "category": "Cover",
-      "subcategory": "POSTER"
+      "subcategory": "POSTER",
+      "basequantity": 1,
+      "papertype": "A3 100 gr"
     }
   ]
 }
