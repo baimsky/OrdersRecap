@@ -128,57 +128,6 @@ namespace OrdersRecap.Controllers
             return filePath;
         }
 
-        //private DataContainer ProcessShopeeData(List<Record> tempData)
-        //{
-        //    List<DataRecord> listData = new List<DataRecord>();
-        //    var mastersData = _masterService.GetMasterDataAsync();
-
-        //    foreach (var x in tempData)
-        //    {
-        //        string tmpVariant = x.tempProduct;
-        //        int tmpQty = Convert.ToInt32(x.tempQty);
-
-        //        DataRecord data = new DataRecord();
-        //        data.originalVariant = tmpVariant;
-        //        data.variant = tmpVariant.Contains(',') ? tmpVariant.Split(',')[0].Trim().Replace(" ", "") : tmpVariant;
-
-        //        var regex = new Regex(@"([A-Za-z]+)(\d*)");
-        //        var match = regex.Match(data.variant);
-        //        data.variantName = match.Groups[1].Value;
-        //        data.variantNumber = match.Groups[2].Value;
-
-        //        data.subVariant = tmpVariant.Contains(',') ? tmpVariant.Split(',')[1] : "";
-        //        data.quantity = tmpQty;
-        //        data.paperType = mastersData.Result.masters.Where(y => y.Code == data.variant).Select(y => y.PaperType).FirstOrDefault().ToString();
-
-        //        listData.Add(data);
-        //    }
-
-        //    var dataContainer = new DataContainer();
-        //    dataContainer.summaryRecords = listData
-        //        .GroupBy(d => new { d.variant, d.subVariant }) // d.variant, d.subVariant, d.paperType
-        //        .Select(g => new SummaryRecord //(g, index)
-        //        {
-        //            //No = index + 1,
-        //            Variant = g.Key.variant,
-        //            SubVariant = g.Key.subVariant,
-        //            TotalQuantity = g.Sum(d => d.quantity),
-        //            TotalPcs = g.Sum(d => (d.subVariant.Contains("Sidu") || d.subVariant.Contains("Bigboss") || d.variant.Contains("Sidu") || d.variant.Contains("Bigboss")) ? d.quantity * 6 : d.quantity * 1),
-        //            PaperType = g.First().paperType
-        //        })
-        //        .OrderBy(s => s.SubVariant)
-        //        .ThenBy(s => s.TotalPcs)
-        //        .ThenBy(s => s.Variant)
-        //        .ToList();
-
-        //    dataContainer.SD = dataContainer.summaryRecords.Where(d => d.SubVariant.Contains("Sidu") || d.Variant.Contains("Sidu")).Sum(d => d.TotalQuantity);
-        //    dataContainer.BB = dataContainer.summaryRecords.Where(d => d.SubVariant.Contains("Bigboss") || d.Variant.Contains("Bigboss")).Sum(d => d.TotalQuantity);
-        //    dataContainer.SDpcs = (dataContainer.SD) * 6;
-        //    dataContainer.BBpcs = (dataContainer.BB) * 6;
-
-        //    return dataContainer;
-        //}
-
         private async Task<DataContainer> ProcessShopeeDataAsync(List<Record> tempData)
         {
             var mastersData = await _masterService.GetMasterDataAsync();
@@ -271,7 +220,7 @@ namespace OrdersRecap.Controllers
         public async Task<IActionResult> Recap(string DataListJson)
         {
             DataContainer? dataContainer = JsonConvert.DeserializeObject<DataContainer>(DataListJson);
-            _recapService.OrganizeFiles(dataContainer);
+            await _recapService.OrganizeFiles(dataContainer);
             ViewBag.DataList = dataContainer;
             return View("Shopee", dataContainer);
         }

@@ -70,175 +70,227 @@
 	}
 	#endregion
 
+    #region ProcessShopeeData
+    //private DataContainer ProcessShopeeData(List<Record> tempData)
+    //{
+    //    List<DataRecord> listData = new List<DataRecord>();
+    //    var mastersData = _masterService.GetMasterDataAsync();
 
-        #region Upload Shopee
-        //[HttpPost]
-        //public IActionResult Shopee(IFormFile[] files)
-        //{
-        //    string mapPath = string.Empty;
-        //    // Iterate each file
-        //    foreach (var file in files)
-        //    {
-        //        // Get the file name from the browser
-        //        var fileName = System.IO.Path.GetFileName(file.FileName);
+    //    foreach (var x in tempData)
+    //    {
+    //        string tmpVariant = x.tempProduct;
+    //        int tmpQty = Convert.ToInt32(x.tempQty);
 
-        //        // Get the file path to be uploaded
-        //        var filePath = Path.Combine(Directory.GetCurrentDirectory(), "Attachment", fileName);
+    //        DataRecord data = new DataRecord();
+    //        data.originalVariant = tmpVariant;
+    //        data.variant = tmpVariant.Contains(',') ? tmpVariant.Split(',')[0].Trim().Replace(" ", "") : tmpVariant;
 
-        //        mapPath = filePath;
+    //        var regex = new Regex(@"([A-Za-z]+)(\d*)");
+    //        var match = regex.Match(data.variant);
+    //        data.variantName = match.Groups[1].Value;
+    //        data.variantNumber = match.Groups[2].Value;
 
-        //        // Check if a file with the same name exists and delete it
-        //        if (System.IO.File.Exists(filePath))
-        //        {
-        //            System.IO.File.Delete(filePath);
-        //        }
+    //        data.subVariant = tmpVariant.Contains(',') ? tmpVariant.Split(',')[1] : "";
+    //        data.quantity = tmpQty;
+    //        data.paperType = mastersData.Result.masters.Where(y => y.Code == data.variant).Select(y => y.PaperType).FirstOrDefault().ToString();
 
-        //        // Create a new local file and copy contents of the uploaded file
-        //        using (var localFile = System.IO.File.OpenWrite(filePath))
-        //        using (var uploadedFile = file.OpenReadStream())
-        //        {
-        //            uploadedFile.CopyTo(localFile);
-        //        }
-        //    }
-        //    ViewBag.Message = "Files are successfully uploaded";
+    //        listData.Add(data);
+    //    }
 
-        //    //bisa passing ke function baru dgn parameter : mapPath, shopee,tokopedia
+    //    var dataContainer = new DataContainer();
+    //    dataContainer.summaryRecords = listData
+    //        .GroupBy(d => new { d.variant, d.subVariant }) // d.variant, d.subVariant, d.paperType
+    //        .Select(g => new SummaryRecord //(g, index)
+    //        {
+    //            //No = index + 1,
+    //            Variant = g.Key.variant,
+    //            SubVariant = g.Key.subVariant,
+    //            TotalQuantity = g.Sum(d => d.quantity),
+    //            TotalPcs = g.Sum(d => (d.subVariant.Contains("Sidu") || d.subVariant.Contains("Bigboss") || d.variant.Contains("Sidu") || d.variant.Contains("Bigboss")) ? d.quantity * 6 : d.quantity * 1),
+    //            PaperType = g.First().paperType
+    //        })
+    //        .OrderBy(s => s.SubVariant)
+    //        .ThenBy(s => s.TotalPcs)
+    //        .ThenBy(s => s.Variant)
+    //        .ToList();
 
-        //    //List<Calculate> listItem = new List<Calculate>();
-        //    List<DataRecord> listData = new List<DataRecord>();
+    //    dataContainer.SD = dataContainer.summaryRecords.Where(d => d.SubVariant.Contains("Sidu") || d.Variant.Contains("Sidu")).Sum(d => d.TotalQuantity);
+    //    dataContainer.BB = dataContainer.summaryRecords.Where(d => d.SubVariant.Contains("Bigboss") || d.Variant.Contains("Bigboss")).Sum(d => d.TotalQuantity);
+    //    dataContainer.SDpcs = (dataContainer.SD) * 6;
+    //    dataContainer.BBpcs = (dataContainer.BB) * 6;
 
-        //    string sheetName = string.Empty;
-        //    using (SpreadsheetDocument myWorkbook = SpreadsheetDocument.Open(mapPath, true))
-        //    {
-        //        //Access the main Workbook part, which contains all references 
-        //        WorkbookPart workbookPart = myWorkbook.WorkbookPart;
-        //        foreach (var wsp in workbookPart.WorksheetParts)
-        //        {
-        //            DocumentFormat.OpenXml.Spreadsheet.Worksheet worksheet = wsp.Worksheet;
-        //            //if (workbookPart.Workbook.Descendants<Sheet>().ElementAt(0).Id.ToString() == "rId1")
-        //            //{
-        //            //    sheetName = workbookPart.Workbook.Descendants<Sheet>().ElementAt(0).Name;
-        //            //}
-        //            sheetName = workbookPart.Workbook.Descendants<Sheet>().ElementAt(0).Name;
-        //        }
-        //    }
+    //    return dataContainer;
+    //}
+    #endregion
 
-        //    int LineX = 2;
-        //    string CellAdressX = "O" + LineX.ToString();
-        //    string LineToReadX = XLGetCellValue(mapPath, sheetName, CellAdressX);
+    #region Upload Shopee
+    //[HttpPost]
+    //public IActionResult Shopee(IFormFile[] files)
+    //{
+    //    string mapPath = string.Empty;
+    //    // Iterate each file
+    //    foreach (var file in files)
+    //    {
+    //        // Get the file name from the browser
+    //        var fileName = System.IO.Path.GetFileName(file.FileName);
 
-        //    int CounterRow = 0;
-        //    string tempVariant = string.Empty;
-        //    int tempQuantity = 0;
+    //        // Get the file path to be uploaded
+    //        var filePath = Path.Combine(Directory.GetCurrentDirectory(), "Attachment", fileName);
 
-        //    //List<Calculate> item = new List<Calculate>();
+    //        mapPath = filePath;
 
-        //    while (LineToReadX.Trim() != "")
-        //    {
-        //        //start
-        //        CounterRow++;
-        //        //tempVariant = "";
-        //        //tempQuantity = 0;
+    //        // Check if a file with the same name exists and delete it
+    //        if (System.IO.File.Exists(filePath))
+    //        {
+    //            System.IO.File.Delete(filePath);
+    //        }
 
-        //        //get data from excel
-        //        tempVariant = XLGetCellValue(mapPath, sheetName, CellAdressX);
+    //        // Create a new local file and copy contents of the uploaded file
+    //        using (var localFile = System.IO.File.OpenWrite(filePath))
+    //        using (var uploadedFile = file.OpenReadStream())
+    //        {
+    //            uploadedFile.CopyTo(localFile);
+    //        }
+    //    }
+    //    ViewBag.Message = "Files are successfully uploaded";
 
-        //        string tempQty = XLGetCellValue(mapPath, sheetName, "R" + LineX.ToString());
-        //        tempQuantity = Convert.ToInt32(tempQty);
+    //    //bisa passing ke function baru dgn parameter : mapPath, shopee,tokopedia
 
-        //        //assign variables
-        //        //
-        //        //Calculate calc = new Calculate();
-        //        //calc.no = CounterRow;
-        //        //calc.variant = tempVariant.Contains(',') ? tempVariant.Split(',')[0].Trim() : tempVariant;
-        //        //calc.subvariant = tempVariant.Contains(',') ? tempVariant.Split(',')[1] : "";
-        //        //calc.quantity = tempQuantity;
-        //        //listItem.Add(calc);
+    //    //List<Calculate> listItem = new List<Calculate>();
+    //    List<DataRecord> listData = new List<DataRecord>();
 
-        //        DataRecord data = new DataRecord();
-        //        //data.no = CounterRow;
-        //        data.originalVariant = tempVariant;
-        //        data.variant = tempVariant.Contains(',') ? tempVariant.Split(',')[0].Trim() : tempVariant;
+    //    string sheetName = string.Empty;
+    //    using (SpreadsheetDocument myWorkbook = SpreadsheetDocument.Open(mapPath, true))
+    //    {
+    //        //Access the main Workbook part, which contains all references 
+    //        WorkbookPart workbookPart = myWorkbook.WorkbookPart;
+    //        foreach (var wsp in workbookPart.WorksheetParts)
+    //        {
+    //            DocumentFormat.OpenXml.Spreadsheet.Worksheet worksheet = wsp.Worksheet;
+    //            //if (workbookPart.Workbook.Descendants<Sheet>().ElementAt(0).Id.ToString() == "rId1")
+    //            //{
+    //            //    sheetName = workbookPart.Workbook.Descendants<Sheet>().ElementAt(0).Name;
+    //            //}
+    //            sheetName = workbookPart.Workbook.Descendants<Sheet>().ElementAt(0).Name;
+    //        }
+    //    }
 
-        //        var regex = new Regex(@"([A-Za-z]+)(\d*)");
-        //        var match = regex.Match(data.variant);
-        //        data.variantName = match.Groups[1].Value;
-        //        data.variantNumber = match.Groups[2].Value;
+    //    int LineX = 2;
+    //    string CellAdressX = "O" + LineX.ToString();
+    //    string LineToReadX = XLGetCellValue(mapPath, sheetName, CellAdressX);
 
-        //        data.subVariant = tempVariant.Contains(',') ? tempVariant.Split(',')[1] : "";
-        //        data.quantity = tempQuantity;
-        //        listData.Add(data);
+    //    int CounterRow = 0;
+    //    string tempVariant = string.Empty;
+    //    int tempQuantity = 0;
 
-        //        tempVariant = "";
-        //        tempQuantity = 0;
+    //    //List<Calculate> item = new List<Calculate>();
 
-        //        //check if end - while
-        //        LineX += 1;
-        //        CellAdressX = "O" + LineX.ToString();
-        //        if (XLGetCellValue(mapPath, sheetName, CellAdressX) != null)
-        //        {
-        //            LineToReadX = XLGetCellValue(mapPath, sheetName, CellAdressX);
-        //        }
-        //        else
-        //        {
-        //            LineToReadX = "";
-        //        }
-        //    }
+    //    while (LineToReadX.Trim() != "")
+    //    {
+    //        //start
+    //        CounterRow++;
+    //        //tempVariant = "";
+    //        //tempQuantity = 0;
 
-        //    var dataContainer = new DataContainer();
-        //    dataContainer.summaryRecords = listData
-        //        .GroupBy(d => new { d.variant, d.subVariant })
-        //        .Select(g => new SummaryRecord //(g, index)
-        //        {
-        //            //No = index + 1,
-        //            Variant = g.Key.variant,
-        //            SubVariant = g.Key.subVariant,
-        //            TotalQuantity = g.Sum(d => d.quantity)
-        //        })
-        //        .OrderBy(s => s.Variant)
-        //        .ThenBy(s => s.SubVariant)
-        //        .ToList();
+    //        //get data from excel
+    //        tempVariant = XLGetCellValue(mapPath, sheetName, CellAdressX);
 
-        //    return View(dataContainer.summaryRecords);
-        //}
-        #endregion
+    //        string tempQty = XLGetCellValue(mapPath, sheetName, "R" + LineX.ToString());
+    //        tempQuantity = Convert.ToInt32(tempQty);
 
-        #region DownloadExcel
-        //public async Task<IActionResult> DownloadExcel() //string filename
-        //{
-        //	//if (filename == null)
-        //	//	return Content("filename is not available");
+    //        //assign variables
+    //        //
+    //        //Calculate calc = new Calculate();
+    //        //calc.no = CounterRow;
+    //        //calc.variant = tempVariant.Contains(',') ? tempVariant.Split(',')[0].Trim() : tempVariant;
+    //        //calc.subvariant = tempVariant.Contains(',') ? tempVariant.Split(',')[1] : "";
+    //        //calc.quantity = tempQuantity;
+    //        //listItem.Add(calc);
 
-        //	var path = Path.Combine(Directory.GetCurrentDirectory(), "Attachment", DateTime.Now.ToShortDateString());
+    //        DataRecord data = new DataRecord();
+    //        //data.no = CounterRow;
+    //        data.originalVariant = tempVariant;
+    //        data.variant = tempVariant.Contains(',') ? tempVariant.Split(',')[0].Trim() : tempVariant;
 
-        //	var memory = CreateSpreadSheet();
-        //	using (var stream = new FileStream(path, FileMode.Open))
-        //	{
-        //		await stream.CopyToAsync(memory);
-        //		return File(stream, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
-        //	}
-        //	//memory.Position = 0;
-        //	//return File(memory, GetContentType(path), Path.GetFileName(path));
-        //}
-        #endregion
+    //        var regex = new Regex(@"([A-Za-z]+)(\d*)");
+    //        var match = regex.Match(data.variant);
+    //        data.variantName = match.Groups[1].Value;
+    //        data.variantNumber = match.Groups[2].Value;
 
-        #region Download
-        //public async Task<IActionResult> Download(string filename)
-        //{
-        //    if (filename == null)
-        //        return Content("filename is not available");
+    //        data.subVariant = tempVariant.Contains(',') ? tempVariant.Split(',')[1] : "";
+    //        data.quantity = tempQuantity;
+    //        listData.Add(data);
 
-        //    var path = Path.Combine(Directory.GetCurrentDirectory(), "Attachment", filename);
+    //        tempVariant = "";
+    //        tempQuantity = 0;
 
-        //    var memory = new MemoryStream();
-        //    using (var stream = new FileStream(path, FileMode.Open))
-        //    {
-        //        await stream.CopyToAsync(memory);
-        //    }
-        //    memory.Position = 0;
-        //    return File(memory, GetContentType(path), Path.GetFileName(path));
-        //}
-        #endregion
+    //        //check if end - while
+    //        LineX += 1;
+    //        CellAdressX = "O" + LineX.ToString();
+    //        if (XLGetCellValue(mapPath, sheetName, CellAdressX) != null)
+    //        {
+    //            LineToReadX = XLGetCellValue(mapPath, sheetName, CellAdressX);
+    //        }
+    //        else
+    //        {
+    //            LineToReadX = "";
+    //        }
+    //    }
+
+    //    var dataContainer = new DataContainer();
+    //    dataContainer.summaryRecords = listData
+    //        .GroupBy(d => new { d.variant, d.subVariant })
+    //        .Select(g => new SummaryRecord //(g, index)
+    //        {
+    //            //No = index + 1,
+    //            Variant = g.Key.variant,
+    //            SubVariant = g.Key.subVariant,
+    //            TotalQuantity = g.Sum(d => d.quantity)
+    //        })
+    //        .OrderBy(s => s.Variant)
+    //        .ThenBy(s => s.SubVariant)
+    //        .ToList();
+
+    //    return View(dataContainer.summaryRecords);
+    //}
+    #endregion
+
+    #region DownloadExcel
+    //public async Task<IActionResult> DownloadExcel() //string filename
+    //{
+    //	//if (filename == null)
+    //	//	return Content("filename is not available");
+
+    //	var path = Path.Combine(Directory.GetCurrentDirectory(), "Attachment", DateTime.Now.ToShortDateString());
+
+    //	var memory = CreateSpreadSheet();
+    //	using (var stream = new FileStream(path, FileMode.Open))
+    //	{
+    //		await stream.CopyToAsync(memory);
+    //		return File(stream, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
+    //	}
+    //	//memory.Position = 0;
+    //	//return File(memory, GetContentType(path), Path.GetFileName(path));
+    //}
+    #endregion
+
+    #region Download
+    //public async Task<IActionResult> Download(string filename)
+    //{
+    //    if (filename == null)
+    //        return Content("filename is not available");
+
+    //    var path = Path.Combine(Directory.GetCurrentDirectory(), "Attachment", filename);
+
+    //    var memory = new MemoryStream();
+    //    using (var stream = new FileStream(path, FileMode.Open))
+    //    {
+    //        await stream.CopyToAsync(memory);
+    //    }
+    //    memory.Position = 0;
+    //    return File(memory, GetContentType(path), Path.GetFileName(path));
+    //}
+    #endregion
 
 	#region CreateSpreadSheet
 	public MemoryStream CreateSpreadSheet()
