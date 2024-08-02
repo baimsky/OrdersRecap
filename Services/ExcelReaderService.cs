@@ -1,15 +1,20 @@
-﻿using DocumentFormat.OpenXml;
-using DocumentFormat.OpenXml.Packaging;
+﻿using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Spreadsheet;
-using Newtonsoft.Json;
+using DocumentFormat.OpenXml;
 using OrdersRecap.Models;
-using System.Data;
 
 namespace OrdersRecap.Services
 {
-    public class ExcelReader
+    public class ExcelReaderService : IExcelReader
     {
-        public List<Record> ReadExcelFile(string filePath)
+        private readonly IConfiguration _configuration;
+
+        public ExcelReaderService(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
+
+        public async Task<List<Record>> ReadExcelFileAsync(string filePath)
         {
             List<Record> records = new List<Record>();
             Record record = new Record();

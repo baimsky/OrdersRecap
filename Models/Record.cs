@@ -15,6 +15,8 @@
         public string? variantNumber { get; set; }
         public string? subVariant { get; set; }
         public int quantity { get; set; }
+        public int baseQuantity { get; set; }
+        public string? paperType { get; set; }
     }
 
     public class SummaryRecord
@@ -27,12 +29,7 @@
         public string? SubVariant { get; set; }
         public int TotalQuantity { get; set; }
         public int TotalPcs { get; set; }
-    }
-
-    public class Sampul
-    {
-        public int SD { get; set; }
-        public int BB { get; set; }
+        public string? PaperType { get; set; }
     }
 
     public class DataContainer

@@ -1,3 +1,5 @@
+using OrdersRecap.Services;
+
 namespace OrdersRecap
 {
     public class Program
@@ -8,6 +10,17 @@ namespace OrdersRecap
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            // Add configuration
+            builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
+            builder.Configuration.AddJsonFile($"appsettings.{builder.Environment.EnvironmentName}.json", optional: true);
+            builder.Configuration.AddEnvironmentVariables();
+
+            // Register services
+            builder.Services.AddScoped<IExcelReader, ExcelReaderService>();
+            builder.Services.AddScoped<IStock, StockService>();
+            builder.Services.AddScoped<IMaster, MasterService>();
+            builder.Services.AddScoped<IRecap, RecapService>();
 
             var app = builder.Build();
 
@@ -29,12 +42,6 @@ namespace OrdersRecap
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
-
-            var uploadsDir = Path.Combine(Directory.GetCurrentDirectory(), "Attachment");
-            if (!Directory.Exists(uploadsDir))
-            {
-                Directory.CreateDirectory(uploadsDir);
-            }
 
             app.Run();
         }

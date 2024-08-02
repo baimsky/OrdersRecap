@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using OrdersRecap.Models;
 using OrdersRecap.Services;
@@ -9,21 +10,30 @@ namespace OrdersRecap.Controllers
 {
     public class RecapController : Controller
     {
-        private readonly ExcelReader _excelReader;
+        private readonly IExcelReader _excelReader;
         private readonly ILogger<RecapController> _logger;
-        private readonly string _masterFilePath = Path.Combine(Directory.GetCurrentDirectory(), "JSON", "master.json");
-        private readonly string _stockFilePath = Path.Combine(Directory.GetCurrentDirectory(), "JSON", "stock.json");
+        private readonly IConfiguration _configuration;
+        private readonly IStock _stockService;
+        private readonly IMaster _masterService;
+        private readonly IRecap _recapService;
 
-        public RecapController(ILogger<RecapController> logger)
+        public RecapController(
+            IExcelReader excelReader,
+            ILogger<RecapController> logger,
+            IConfiguration configuration,
+            IStock stockService,
+            IMaster masterService,
+            IRecap recapService)
         {
-            _excelReader = new ExcelReader();
+            _excelReader = excelReader;
             _logger = logger;
+            _configuration = configuration;
+            _stockService = stockService;
+            _masterService = masterService;
+            _recapService = recapService;
         }
 
-        public IActionResult Index()
-        {
-            return View();
-        }
+        public IActionResult Index() => View();
 
         public async Task<IActionResult> Shopee() //string sortOrder, string currentFilter, string searchString, int? pageNumber
         {
@@ -44,7 +54,9 @@ namespace OrdersRecap.Controllers
             //ViewData["CurrentFilter"] = searchString;
 
             //List<SummaryRecord> summary = new List<SummaryRecord>();
-            DataContainer dataContainer = new DataContainer();
+
+            //DataContainer dataContainer = new DataContainer();
+            var dataContainer = await Task.FromResult(new DataContainer());
 
             //if (!String.IsNullOrEmpty(searchString))
             //{
@@ -74,27 +86,10 @@ namespace OrdersRecap.Controllers
             return View(dataContainer);
         }
 
-        public IActionResult MasterData()
+        public async Task<IActionResult> MasterData()
         {
-            using (StreamReader r = new StreamReader("JSON/master.json"))
-            {
-                string json = r.ReadToEnd();
-                var mastersData = JsonConvert.DeserializeObject<Masters>(json);
-                mastersData.masters.OrderBy(x => x.Code);
-                return View(mastersData);
-            }
-        }
-
-        public Masters getMasterData()
-        {
-            Masters masters = new Masters();
-            using (StreamReader r = new StreamReader("JSON/master.json"))
-            {
-                string json = r.ReadToEnd();
-                masters = JsonConvert.DeserializeObject<Masters>(json);
-                masters.masters.OrderBy(x => x.Code);
-                return masters;
-            }
+            var mastersData = await _masterService.GetMasterDataAsync();
+            return View(mastersData);
         }
 
         [HttpPost]
@@ -103,12 +98,25 @@ namespace OrdersRecap.Controllers
             if (file == null || file.Length == 0)
                 return BadRequest("File is empty.");
 
-            string filePath = System.IO.Path.Combine(Directory.GetCurrentDirectory(), "Attachment", file.FileName);
-
-            if (System.IO.File.Exists(filePath))
+            try
             {
-                System.IO.File.Delete(filePath);
+                string filePath = await SaveFileAsync(file);
+                var tempData = await _excelReader.ReadExcelFileAsync(filePath);
+                var dataContainer = await ProcessShopeeDataAsync(tempData);
+                ViewBag.DataList = dataContainer;
+                return View(dataContainer);
             }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error processing Shopee data");
+                return StatusCode(500, "An error occurred while processing the file.");
+            }
+        }
+
+        private async Task<string> SaveFileAsync(IFormFile file)
+        {
+            string uploadsFolder = _configuration["UploadFilePath"];
+            string filePath = Path.Combine(uploadsFolder, file.FileName);
 
             using (var stream = new FileStream(filePath, FileMode.Create))
             {
@@ -117,78 +125,117 @@ namespace OrdersRecap.Controllers
 
             ViewBag.Message = "Files are successfully uploaded";
 
-            List<DataRecord> listData = new List<DataRecord>();
-            List<Record> tempData = _excelReader.ReadExcelFile(filePath);
-
-            foreach (var x in tempData)
-            {
-                string tmpVariant = x.tempProduct;
-                int tmpQty = Convert.ToInt32(x.tempQty);
-
-                DataRecord data = new DataRecord();
-                data.originalVariant = tmpVariant;
-                data.variant = tmpVariant.Contains(',') ? tmpVariant.Split(',')[0].Trim().Replace(" ", "") : tmpVariant;
-
-                var regex = new Regex(@"([A-Za-z]+)(\d*)");
-                var match = regex.Match(data.variant);
-                data.variantName = match.Groups[1].Value;
-                data.variantNumber = match.Groups[2].Value;
-
-                data.subVariant = tmpVariant.Contains(',') ? tmpVariant.Split(',')[1] : "";
-                data.quantity = tmpQty;
-                listData.Add(data);
-            }
-
-            var dataContainer = new DataContainer();
-            dataContainer.summaryRecords = listData
-                .GroupBy(d => new { d.variant, d.subVariant })
-                .Select(g => new SummaryRecord //(g, index)
-                {
-                    //No = index + 1,
-                    Variant = g.Key.variant,
-                    SubVariant = g.Key.subVariant,
-                    TotalQuantity = g.Sum(d => d.quantity),
-                    TotalPcs = g.Sum(d => (d.subVariant.Contains("Sidu") || d.subVariant.Contains("Bigboss") || d.variant.Contains("Sidu") || d.variant.Contains("Bigboss")) ? d.quantity * 6 : d.quantity * 1)
-                })
-                .OrderBy(s => s.SubVariant)
-                .ThenBy(s => s.TotalPcs)
-                .ThenBy(s => s.Variant)
-                .ToList();
-
-            dataContainer.SD = dataContainer.summaryRecords.Where(d => d.SubVariant.Contains("Sidu") || d.Variant.Contains("Sidu")).Sum(d => d.TotalQuantity);
-            dataContainer.BB = dataContainer.summaryRecords.Where(d => d.SubVariant.Contains("Bigboss") || d.Variant.Contains("Bigboss")).Sum(d => d.TotalQuantity);
-            dataContainer.SDpcs = (dataContainer.SD) * 6;
-            dataContainer.BBpcs = (dataContainer.BB) * 6;
-
-            return View(dataContainer);
+            return filePath;
         }
 
-        public IActionResult Stock()
+        private async Task<DataContainer> ProcessShopeeDataAsync(List<Record> tempData)
         {
-            var stocks = GetStocks();
-            stocks = stocks.OrderBy(x => x.variant).ToList();
+            var mastersData = await _masterService.GetMasterDataAsync();
+            var mastersDictionary = mastersData.masters.ToDictionary(m => m.Code);
+
+            /// check Dictionary if master.Code contains duplicate
+            //var mastersDictionary = new Dictionary<string, Master>();
+            //foreach (var master in mastersData.masters)
+            //{
+            //    if (!mastersDictionary.TryAdd(master.Code, master))
+            //    {
+            //        _logger.LogWarning($"Duplicate master code found: {master.Code}");
+            //    }
+            //}
+
+            var listData = tempData.Select(x =>
+            {
+                var tmpVariant = x.tempProduct;
+                var variantParts = tmpVariant.Split(',');
+                var variant = variantParts[0].Trim().Replace(" ", "");
+                var tmpSubVariant = variantParts.Length > 1 ? variantParts[1].Trim().Replace(" ", "") : "";
+                var match = VariantRegex.Match(variant);
+
+                if (!mastersDictionary.TryGetValue(variant, out var masterDatas))
+                {
+                    // Handle the case where the variant is not found in the master data
+                    //return null;
+                    _logger.LogWarning($"Variant not found in master data: {variant}");
+                }
+
+                // Try to get masterData, but proceed even if it's not found
+                mastersDictionary.TryGetValue(variant, out var masterData);
+
+                Detail? detail = null;
+                if (masterData != null && masterData.Details != null)
+                {
+                    detail = !string.IsNullOrEmpty(tmpSubVariant)
+                                ? masterData.Details.FirstOrDefault(d => d.SubVariant == tmpSubVariant)
+                                : masterData.Details.FirstOrDefault();
+                }
+
+                return new DataRecord
+                {
+                    originalVariant = tmpVariant,
+                    variant = variant,
+                    variantName = match.Groups[1].Value,
+                    variantNumber = match.Groups[2].Value,
+                    subVariant = detail?.SubVariant ?? tmpSubVariant ?? "",
+                    quantity = Convert.ToInt32(x.tempQty),
+                    baseQuantity = masterData?.BaseQuantity ?? 1, 
+                    paperType = detail?.PaperType ?? masterData?.PaperType ?? "Unknown"
+                };
+            })
+            //.Where(d => d != null)
+            .ToList();
+
+            var dataContainer = new DataContainer
+            {
+                summaryRecords = listData
+                    .GroupBy(d => new { d.variant, d.subVariant })
+                    .Select(g => new SummaryRecord
+                    {
+                        Variant = g.Key.variant,
+                        SubVariant = g.Key.subVariant,
+                        TotalQuantity = g.Sum(d => d.quantity),
+                        TotalPcs = g.Sum(d => d.quantity * d.baseQuantity),
+                        PaperType = g.First().paperType
+                    })
+                    .OrderBy(s => s.SubVariant)
+                    .ThenBy(s => s.TotalPcs)
+                    .ThenBy(s => s.Variant)
+                    .ToList()
+            };
+
+            dataContainer.SD = dataContainer.summaryRecords.Where(d => IsSidu(d.SubVariant) || IsSidu(d.Variant)).Sum(d => d.TotalQuantity);
+            dataContainer.BB = dataContainer.summaryRecords.Where(d => IsBigboss(d.SubVariant) || IsBigboss(d.Variant)).Sum(d => d.TotalQuantity);
+            dataContainer.SDpcs = dataContainer.summaryRecords.Where(d => IsSidu(d.SubVariant) || IsSidu(d.Variant)).Sum(d => d.TotalPcs);
+            dataContainer.BBpcs = dataContainer.summaryRecords.Where(d => IsBigboss(d.SubVariant) || IsBigboss(d.Variant)).Sum(d => d.TotalPcs);
+
+            return dataContainer;
+        }
+
+        private bool IsSiduOrBigboss(string value) => IsSidu(value) || IsBigboss(value);
+        private bool IsSidu(string value) => value.Contains("Sidu", StringComparison.OrdinalIgnoreCase);
+        private bool IsBigboss(string value) => value.Contains("Bigboss", StringComparison.OrdinalIgnoreCase);
+        private static readonly Regex VariantRegex = new Regex(@"([A-Za-z]+)(\d*)", RegexOptions.Compiled);
+
+
+        [HttpPost]
+        public async Task<IActionResult> Recap(string DataListJson)
+        {
+            DataContainer? dataContainer = JsonConvert.DeserializeObject<DataContainer>(DataListJson);
+            await _recapService.OrganizeFiles(dataContainer);
+            ViewBag.DataList = dataContainer;
+            return View("Shopee", dataContainer);
+        }
+
+        public async Task<IActionResult> Stock()
+        {
+            var stocks = await _stockService.GetStocksAsync();
             return View(stocks);
         }
 
         [HttpPost]
-        public IActionResult Edit(List<Stock> stocks)
+        public async Task<IActionResult> Edit(List<Stock> stocks)
         {
-            SaveStocks(stocks);
+            await _stockService.SaveStocksAsync(stocks);
             return RedirectToAction("Stock");
-        }
-
-        public List<Stock> GetStocks()
-        {
-            var jsonData = System.IO.File.ReadAllText(_stockFilePath);
-            var stocksData = JsonConvert.DeserializeObject<Stocks>(jsonData);
-            return (List<Stock>)(stocksData?.stocks ?? new List<Stock>());
-        }
-
-        public void SaveStocks(List<Stock> stocks)
-        {
-            var stocksData = new Stocks { stocks = stocks };
-            var jsonData = JsonConvert.SerializeObject(stocksData, Formatting.Indented);
-            System.IO.File.WriteAllText(_stockFilePath, jsonData);
         }
     }
 }

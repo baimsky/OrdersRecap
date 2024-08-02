@@ -13,17 +13,20 @@
     <button type="submit">Upload</button>
 </form>
 
-@* <form method="post" enctype="multipart/form-data">
-	<input type="file" name="files" multiple />
-	<button type="submit">Upload</button>
-</form> *@
-
 <!-- To show the success message to the user  -->
 @if (ViewBag.Message != null)
 {
 	<div class="alert alert-success" style="margin-top:50px">
 		@ViewBag.Message
 	</div>
+
+    var dataList = ViewBag.DataList;
+    var serializedDataList = Newtonsoft.Json.JsonConvert.SerializeObject(dataList);
+
+    <form asp-action="Recap" enctype="multipart/form-data" method="post">
+        <input type="hidden" name="DataListJson" value="@serializedDataList " />
+        <button type="submit" class="btn btn-primary">Save Changes</button>
+    </form>
 }
 
 @* <form asp-action="Shopee" method="get">
